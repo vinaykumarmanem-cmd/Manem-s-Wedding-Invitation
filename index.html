@@ -1,3 +1,4 @@
+```html id="full-updated-code"
 <!DOCTYPE html>
 <html lang="te">
 <head>
@@ -151,7 +152,7 @@ body {
     text-decoration: none;
 }
 
-/* ✅ FIXED GALLERY */
+/* GALLERY */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -160,10 +161,15 @@ body {
 
 .gallery-grid img {
     width: 100%;
-    height: 140px;
+    height: 150px;
     object-fit: cover;
-    object-position: top; /* 🔥 FIX: shows faces properly */
+    object-position: top;
     border-radius: 10px;
+}
+
+/* 🔥 FIX ONLY SECOND IMAGE */
+.img2 {
+    object-position: center;
 }
 
 @media (min-width: 600px) {
@@ -212,7 +218,7 @@ body {
     <h2>మానెం వారి పెండ్లిపిలుపు</h2>
 </div>
 
-<!-- 💑 COUPLE -->
+<!-- COUPLE -->
 <div class="section couple">
     <div class="couple-photo-wrapper">
         <div class="couple-photo-border"></div>
@@ -241,7 +247,7 @@ body {
 <div class="section gallery">
     <div class="gallery-grid">
         <img src="01.jpg">
-        <img src="02.jpeg">
+        <img src="02.jpeg" class="img2">
         <img src="03.jpeg">
         <img src="04.jpeg">
         <img src="05.jpg">
@@ -267,3 +273,4 @@ function openInvite(){
 
 </body>
 </html>
+```
