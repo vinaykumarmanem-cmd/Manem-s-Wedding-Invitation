@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="te">
 <head>
@@ -16,17 +16,17 @@ body {
     color: #2c2c2c;
 }
 
-/* COVER PAGE */
+/* COVER */
 #cover {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #faf8f3; /* plain background */
+    background: #faf8f3;
 }
 
 .cover-card {
-    background: linear-gradient(135deg, #fff8e1, #ffe4ec); /* soft gold + pink */
+    background: linear-gradient(135deg, #fff8e1, #ffe4ec);
     padding: 35px 25px;
     border-radius: 20px;
     text-align: center;
@@ -35,48 +35,39 @@ body {
     border: 2px solid #e8c76a;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
+
 .top-icon {
-    font-size: 30px;
-    margin-bottom: 10px;
+    font-size: 24px;
 }
 
 .invite-line {
-    font-size: 16px;
     color: #555;
 }
 
 .names {
-    font-size: 28px;
+    font-size: 26px;
     color: #1a2a4a;
-    margin: 5px 0;
 }
 
 .amp {
-    font-size: 20px;
     color: #b38b00;
 }
 
-.invite-text {
-    font-size: 15px;
-    margin: 15px 0;
-}
-
 .date {
-    font-size: 20px;
     font-weight: bold;
     color: #b38b00;
 }
 
 .btn {
-    padding: 12px 25px;
+    padding: 10px 20px;
     background: #1a2a4a;
     color: white;
-    border-radius: 25px;
+    border-radius: 20px;
     border: none;
     cursor: pointer;
 }
 
-/* MAIN CONTENT */
+/* MAIN */
 .container {
     max-width: 600px;
     margin: auto;
@@ -100,24 +91,61 @@ body {
 .main-title {
     text-align: center;
     color: #b38b00;
-    font-size: 28px;
 }
 
 .sub-heading {
     color: #b38b00;
-    font-size: 18px;
-    margin-bottom: 10px;
 }
 
+/* 💑 COUPLE PHOTO */
+.couple-photo-wrapper {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin: 0 auto 20px;
+}
+
+.couple-photo-border {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border: 3px dashed #e8c76a;
+    border-radius: 50%;
+    animation: rotate 12s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.couple-photo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #b38b00;
+}
+
+.couple-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* EVENTS */
 .events {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 }
 
 .event {
-    background: #ffffff;
-    padding: 15px;
+    background: #fff;
+    padding: 10px;
     border-radius: 10px;
 }
 
@@ -126,7 +154,7 @@ body {
     margin-top: 15px;
     padding: 10px 20px;
     background: #1a2a4a;
-    color: #fff;
+    color: white;
     border-radius: 25px;
     text-decoration: none;
 }
@@ -140,14 +168,9 @@ body {
 
 .gallery-grid img {
     width: 100%;
-    height: 150px;
+    height: 140px;
     object-fit: cover;
     border-radius: 10px;
-    transition: 0.3s;
-}
-
-.gallery-grid img:hover {
-    transform: scale(1.05);
 }
 
 @media (min-width: 600px) {
@@ -160,7 +183,6 @@ body {
 
 <body>
 
-<!-- AUDIO -->
 <audio id="bg-music" loop>
     <source src="song.mp3.mpeg" type="audio/mpeg">
 </audio>
@@ -176,13 +198,10 @@ body {
         <div class="amp">&</div>
         <h1 class="names">నీళవేణి</h1>
 
-        <p class="invite-text">
-         
-            <p class="invite-text">
-    మా వివాహ శుభకార్యానికి<br>
-    మీరు విచ్చేసి  వరుడు - వధువు లను 💑 ఆశీర్వదించగలరు
-</p>
-      
+        <p>
+            మా వివాహ శుభకార్యానికి<br>
+            మీరు విచ్చేసి వరుడు - వధువు లను 💑 ఆశీర్వదించగలరు
+        </p>
 
         <p class="date">29 ఏప్రిల్ 2026</p>
 
@@ -196,36 +215,38 @@ body {
 <h1 class="main-title">💐 వివాహ ఆహ్వానం 💐</h1>
 
 <div class="section welcome">
-    <div class="sub-heading">📜 ఆహ్వానం</div>
     <p>శ్రీరస్తు • శుభమస్తు</p>
     <h2>మానెం వారి పెండ్లిపిలుపు</h2>
-    <p>మీకు హృదయపూర్వక స్వాగతం</p>
 </div>
 
+<!-- 💑 COUPLE SECTION WITH PHOTO -->
 <div class="section couple">
+
+    <!-- 💑 Couple Image -->
+    <div class="couple-photo-wrapper">
+        <div class="couple-photo-border"></div>
+        <div class="couple-photo">
+            <img src="couple.jpg.jpeg" alt="Couple">
+        </div>
+    </div>
+
+    <!-- 👇 Your same content (unchanged) -->
     <div class="sub-heading">💑 వరుడు - వధువు</div>
     <h2>నాగరాజు & నీళవేణి</h2>
     <p>"రెండు ప్రాణాలు, ఒకే హృదయం"</p>
+
 </div>
-
 <div class="section events-section">
-    <div class="sub-heading">📅 కార్యక్రమాలు</div>
-
     <div class="events">
-        <div class="event">🪔 సుముహూర్తం – సాయంత్రం 7:51</div>
+        <div class="event">🪔 సుముహూర్తం – 7:51 PM</div>
         <div class="event">🕉️ వివాహం – చాపర గ్రామం</div>
-        <div class="event">🍽️ భోజనం – మధ్యాహ్నం 12:00 నుంచి</div>
+        <div class="event">🍽️ భోజనం – 12:00 PM</div>
     </div>
 
-    <a href="https://www.google.com/maps/search/?api=1&query=Chapara+Village"
-       target="_blank"
-       class="map-btn">📍 గూగుల్ మ్యాప్</a>
+    <a href="#" class="map-btn">📍 మ్యాప్</a>
 </div>
 
-<!-- GALLERY -->
 <div class="section gallery">
-    <div class="sub-heading">📸 మా జ్ఞాపకాలు</div>
-
     <div class="gallery-grid">
         <img src="01.jpg">
         <img src="02.jpg">
@@ -237,8 +258,7 @@ body {
 </div>
 
 <div class="section footer">
-    <h3>🙏 మీ రాక మాకు ఆనందం 🙏</h3>
-    <h2>💍 నాగరాజు & నీళవేణి 💍</h2>
+    <h3>🙏 మా ఆనంద క్షణాల్లో మీరు భాగస్వాములు కావాలని కోరుకుంటున్నాము 🙏</h3>
 </div>
 
 </div>
@@ -251,7 +271,5 @@ function openInvite(){
 }
 </script>
 
-
 </body>
 </html>
-```
