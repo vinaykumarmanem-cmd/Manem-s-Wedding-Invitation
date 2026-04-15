@@ -29,15 +29,12 @@ body {
     text-align: center;
 }
 
-/* Section colors */
-.top-couple { background: #fff3cd; }
 .welcome { background: #fff8e1; }
 .couple { background: #ffe4ec; }
 .events-section { background: #e3f2fd; }
 .gallery { background: #e8f5e9; }
 .footer { background: #f3e5f5; }
 
-/* Headings */
 .main-title {
     text-align: center;
     color: #b38b00;
@@ -51,15 +48,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* Special Couple Title */
-.couple-names {
-    font-size: 26px;
-    font-weight: bold;
-    color: #1a2a4a;
-    line-height: 1.6;
-}
-
-/* Events */
 .events {
     display: flex;
     flex-direction: column;
@@ -72,7 +60,6 @@ body {
     border-radius: 10px;
 }
 
-/* Map button */
 .map-btn {
     display: inline-block;
     margin-top: 15px;
@@ -84,7 +71,6 @@ body {
     font-size: 14px;
 }
 
-/* Button */
 .btn {
     padding: 12px 25px;
     background: #1a2a4a;
@@ -94,12 +80,37 @@ body {
     cursor: pointer;
 }
 
-/* Cover */
 #cover {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* 📸 GALLERY */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+@media (min-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 </style>
 </head>
@@ -125,16 +136,6 @@ body {
 
 <h1 class="main-title">💐 వివాహ ఆహ్వానం 💐</h1>
 
-<!-- 💑 TOP COUPLE HIGHLIGHT -->
-<div class="section top-couple">
-    <div class="sub-heading">💑 మా వివాహం</div>
-    <div class="couple-names">
-        నాగరాజు <br> 💛 <br> నీళవేణి
-    </div>
-    <p>"రెండు ప్రాణాలు, ఒకే హృదయం"</p>
-</div>
-
-<!-- Welcome -->
 <div class="section welcome">
     <div class="sub-heading">📜 ఆహ్వానం</div>
     <p>శ్రీరస్తు • శుభమస్తు</p>
@@ -142,12 +143,16 @@ body {
     <p>మీకు హృదయపూర్వక స్వాగతం</p>
 </div>
 
-<!-- Events -->
+<div class="section couple">
+    <div class="sub-heading">💑 వరుడు - వధువు</div>
+    <h2>నాగరాజు & నీళవేణి</h2>
+    <p>"రెండు ప్రాణాలు, ఒకే హృదయం"</p>
+</div>
+
 <div class="section events-section">
     <div class="sub-heading">📅 కార్యక్రమాల వివరాలు</div>
 
     <div class="events">
-
         <div class="event">
             <strong>🪔 సుముహూర్తం</strong><br>
             సాయంత్రం 7:51
@@ -162,10 +167,8 @@ body {
             <strong>🍽️ భోజనం</strong><br>
             మధ్యాహ్నం 12:00 నుంచి
         </div>
-
     </div>
 
-    <!-- 📍 LOCATION -->
     <div style="margin-top:20px;">
         <p><strong>📍 స్థలం:</strong><br>
         చాపర గ్రామం, పెద్ద దేవర వీధి</p>
@@ -176,16 +179,23 @@ body {
            📍 గూగుల్ మ్యాప్‌లో చూడండి
         </a>
     </div>
-
 </div>
 
-<!-- Gallery -->
+<!-- 📸 GALLERY -->
 <div class="section gallery">
     <div class="sub-heading">📸 మా జ్ఞాపకాలు</div>
     <p>మా ప్రయాణంలోని మధుర క్షణాలు</p>
+
+    <div class="gallery-grid">
+        <img src="01.jpg" alt="photo1">
+        <img src="02.jpg" alt="photo2">
+        <img src="03.jpg" alt="photo3">
+        <img src="04.jpg" alt="photo4">
+        <img src="05.jpg" alt="photo5">
+        <img src="06.jpg" alt="photo6">
+    </div>
 </div>
 
-<!-- Footer -->
 <div class="section footer">
     <h3>🙏 మీ రాక మాకు ఆనందం 🙏</h3>
     <h2>💍 నాగరాజు & నీళవేణి 💍</h2>
@@ -197,7 +207,8 @@ body {
 <script>
 function openInvite(){
     const music = document.getElementById("bg-music");
-    music.play().catch(()=>{});
+
+    music.play().catch(() => {});
 
     document.getElementById("cover").style.display="none";
     document.getElementById("main").style.display="block";
