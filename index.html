@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="te">
 <head>
@@ -36,22 +36,15 @@ body {
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-.top-icon {
-    font-size: 24px;
-}
-
-.invite-line {
-    color: #555;
-}
+.top-icon { font-size: 24px; }
+.invite-line { color: #555; }
 
 .names {
     font-size: 26px;
     color: #1a2a4a;
 }
 
-.amp {
-    color: #b38b00;
-}
+.amp { color: #b38b00; }
 
 .date {
     font-weight: bold;
@@ -159,7 +152,7 @@ body {
     text-decoration: none;
 }
 
-/* GALLERY */
+/* ✅ FIXED GALLERY */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -170,6 +163,7 @@ body {
     width: 100%;
     height: 140px;
     object-fit: cover;
+    object-position: top; /* 🔥 FIX: shows faces properly */
     border-radius: 10px;
 }
 
@@ -219,10 +213,8 @@ body {
     <h2>మానెం వారి పెండ్లిపిలుపు</h2>
 </div>
 
-<!-- 💑 COUPLE SECTION WITH PHOTO -->
+<!-- 💑 COUPLE -->
 <div class="section couple">
-
-    <!-- 💑 Couple Image -->
     <div class="couple-photo-wrapper">
         <div class="couple-photo-border"></div>
         <div class="couple-photo">
@@ -230,12 +222,12 @@ body {
         </div>
     </div>
 
-    <!-- 👇 Your same content (unchanged) -->
     <div class="sub-heading">💑 వరుడు - వధువు</div>
     <h2>నాగరాజు & నీళవేణి</h2>
     <p>"రెండు ప్రాణాలు, ఒకే హృదయం"</p>
-
 </div>
+
+<!-- EVENTS -->
 <div class="section events-section">
     <div class="events">
         <div class="event">🪔 సుముహూర్తం – 7:51 PM</div>
@@ -246,6 +238,7 @@ body {
     <a href="#" class="map-btn">📍 మ్యాప్</a>
 </div>
 
+<!-- GALLERY -->
 <div class="section gallery">
     <div class="gallery-grid">
         <img src="01.jpg">
@@ -257,6 +250,7 @@ body {
     </div>
 </div>
 
+<!-- FOOTER -->
 <div class="section footer">
     <h3>🙏 మా ఆనంద క్షణాల్లో మీరు భాగస్వాములు కావాలని కోరుకుంటున్నాము 🙏</h3>
 </div>
@@ -273,3 +267,4 @@ function openInvite(){
 
 </body>
 </html>
+```
