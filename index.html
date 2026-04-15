@@ -15,16 +15,13 @@ body {
     color: #2c2c2c;
 }
 
-/* Container */
 .container {
     max-width: 600px;
     margin: auto;
     padding: 20px;
 }
 
-/* Card Sections */
 .section {
-    background: #ffffff;
     margin: 20px 0;
     padding: 25px;
     border-radius: 12px;
@@ -32,7 +29,12 @@ body {
     text-align: center;
 }
 
-/* Headings */
+.welcome { background: #fff8e1; }
+.couple { background: #ffe4ec; }
+.events-section { background: #e3f2fd; }
+.gallery { background: #e8f5e9; }
+.footer { background: #f3e5f5; }
+
 .main-title {
     text-align: center;
     color: #b38b00;
@@ -46,11 +48,6 @@ body {
     margin-bottom: 10px;
 }
 
-h2 {
-    margin: 10px 0;
-}
-
-/* Event Cards */
 .events {
     display: flex;
     flex-direction: column;
@@ -58,14 +55,23 @@ h2 {
 }
 
 .event {
-    background: #f7f3ea;
+    background: #ffffff;
     padding: 15px;
     border-radius: 10px;
 }
 
-/* Button */
-.btn {
+.map-btn {
     display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #1a2a4a;
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btn {
     padding: 12px 25px;
     background: #1a2a4a;
     color: white;
@@ -74,21 +80,21 @@ h2 {
     cursor: pointer;
 }
 
-/* Cover */
 #cover {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.cover-box {
-    text-align: center;
-}
 </style>
 </head>
 
 <body>
+
+<!-- 🎵 AUDIO -->
+<audio id="bg-music" loop>
+    <source src="song.mp3.mpeg" type="audio/mpeg">
+</audio>
 
 <!-- COVER -->
 <div id="cover">
@@ -104,27 +110,23 @@ h2 {
 
 <h1 class="main-title">💐 వివాహ ఆహ్వానం 💐</h1>
 
-<!-- Welcome -->
-<div class="section">
+<div class="section welcome">
     <div class="sub-heading">📜 ఆహ్వానం</div>
     <p>శ్రీరస్తు • శుభమస్తు</p>
     <h2>మానెం వారి పెండ్లిపిలుపు</h2>
     <p>మీకు హృదయపూర్వక స్వాగతం</p>
 </div>
 
-<!-- Couple -->
-<div class="section">
+<div class="section couple">
     <div class="sub-heading">💑 వరుడు - వధువు</div>
     <h2>నాగరాజు & నీళవేణి</h2>
     <p>"రెండు ప్రాణాలు, ఒకే హృదయం"</p>
 </div>
 
-<!-- Events -->
-<div class="section">
+<div class="section events-section">
     <div class="sub-heading">📅 కార్యక్రమాల వివరాలు</div>
 
     <div class="events">
-
         <div class="event">
             <strong>🪔 సుముహూర్తం</strong><br>
             సాయంత్రం 7:51
@@ -139,18 +141,26 @@ h2 {
             <strong>🍽️ భోజనం</strong><br>
             మధ్యాహ్నం 12:00 నుంచి
         </div>
+    </div>
 
+    <div style="margin-top:20px;">
+        <p><strong>📍 స్థలం:</strong><br>
+        చాపర గ్రామం, పెద్ద దేవర వీధి</p>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=Chapara+Village+pedda+devara+veedhi+532216"
+           target="_blank"
+           class="map-btn">
+           📍 గూగుల్ మ్యాప్‌లో చూడండి
+        </a>
     </div>
 </div>
 
-<!-- Gallery -->
-<div class="section">
+<div class="section gallery">
     <div class="sub-heading">📸 మా జ్ఞాపకాలు</div>
     <p>మా ప్రయాణంలోని మధుర క్షణాలు</p>
 </div>
 
-<!-- Footer -->
-<div class="section">
+<div class="section footer">
     <h3>🙏 మీ రాక మాకు ఆనందం 🙏</h3>
     <h2>💍 నాగరాజు & నీళవేణి 💍</h2>
     <p>29 ఏప్రిల్ 2026 • చాపర గ్రామం</p>
@@ -160,6 +170,10 @@ h2 {
 
 <script>
 function openInvite(){
+    // ▶️ Play music
+    const music = document.getElementById("bg-music");
+    music.play().catch(() => {});
+
     document.getElementById("cover").style.display="none";
     document.getElementById("main").style.display="block";
 }
